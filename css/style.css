@@ -8,14 +8,16 @@ body{
     margin: 0 2% 0 2%;
 }
 .nav-link{
+    color: #ffffff;
     font-size:1.5rem;
     font-weight:500;
 }
 .nav-link:hover{
-    backgound-color: fff;
+    background-color: fff;
+    color: #0077B5;
 }
 .home{
-    height: 70vh;
+    height: 60vh;
 }
 .home{
     background-image:url("../img/home-office-336373_1920.jpg");
