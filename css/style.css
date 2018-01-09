@@ -1,0 +1,50 @@
+body{
+    font-size: 16px;
+    padding-top: 0px;
+}
+
+.nav-item{
+    padding:2% 4% 2% 4%;
+    margin: 0 2% 0 2%;
+}
+.nav-link{
+    font-size:1.5rem;
+    font-weight:500;
+}
+.nav-link:hover{
+    backgound-color: fff;
+}
+.home{
+    height: 70vh;
+}
+.home{
+    background-image:url("../img/home-office-336373_1920.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+
+}
+.title{
+    font-size: 3rem;
+    text-align: center;
+}
+
+#about{
+    background-color: #777777;
+    color: #ffffff;
+}
+#portfolio{
+
+}
+
+#contact{
+    background-color: #777777;
+    color:#ffffff;
+}
+.divider{
+    width: 80px;
+    height: 5px;
+    background-color: #dffdff;
+    margin: 0 auto 20px;
+}
