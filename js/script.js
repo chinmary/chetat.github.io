@@ -23,7 +23,7 @@ $(document).ready(function(){
     });
 });
 var typed = new Typed('.intro', {
-    strings: ["Howdy! I'm Wilfred.", "I  Design Websites.", "I Also Build Mobile Applications", "You Can't Challenge Me On PES17"],
+    strings: ["Howdy! I'm Wilfred.", "I  Design Websites.", "I Also Build Mobile Applications", "You Can't Challenge Me On PES17."],
     typeSpeed: 100,
     loop: true,
     backSpeed: 40,
