@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Yeku Wilfreed C.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Yeku Wilfred C.</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css"/>
@@ -77,24 +78,15 @@
     <div class="container">
         <h2 class="title">Portfolio</h2>
         <div class="row">
-            <div class="col-md-4 col-sm-6 col-xs-12 pt-3">
+            <div class="col-md-4 pt-3">
                 <a href="http://oc-selection.com" target="_blank"><img
                         src="https://thumbnail.ws/get/thumbnail/?apikey=ab45a17344aa033247137cf2d457fc39ee4e7e16a464&url=oc-selection.com&width=400&mobile=false"
                         class="img-fluid"/></a>
             </div>
-            <div class="col-md-4 col-sm-6 col-xs-12 pt-3">
+            <div class="col-md-4 pt-3">
                 <img src="http://via.placeholder.com/350x250" class="img-fluid"/>
             </div>
-            <div class="col-md-4 col-sm-6 col-xs-12 pt-3">
-                <img src="http://via.placeholder.com/350x250" class="img-fluid"/>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12 pt-3">
-                <img src="http://via.placeholder.com/350x250" class="img-fluid"/>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12 pt-3">
-                <img src="http://via.placeholder.com/350x250" class="img-fluid"/>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12 pt-3">
+            <div class="col-md-4  pt-3">
                 <img src="http://via.placeholder.com/350x250" class="img-fluid"/>
             </div>
         </div>
