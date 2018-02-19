@@ -5,16 +5,22 @@
 	// Check if name has been entered
 	if (!isset($_POST['name'])) {
 		$errors['name'] = 'Please enter your name';
+	}else{
+		$name = $_POST['name'];
 	}
 
 	// Check if email has been entered and is valid
 	if (!isset($_POST['email']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
 		$errors['email'] = 'Please enter a valid email address';
+	}else{
+		$email = $_POST['email'];
 	}
 
 	//Check if message has been entered
 	if (!isset($_POST['message'])) {
 		$errors['message'] = 'Please enter your message';
+	}else{
+		$message = $_POST['message'];
 	}
 
 	$errorOutput = '';
@@ -39,9 +45,6 @@
 
 
 
-	$name = $_POST['name'];
-	$email = $_POST['email'];
-	$message = $_POST['message'];
 	$from = $email;
 	$to = 'yekuwilfred@gmail.com;  // please change this email id';
 	$subject = 'Contact Form : Yeku Wilfred C. bizness';
@@ -60,14 +63,15 @@
 		$result .= '</div>';
 
 		echo $result;
-		die();
+	}else{
+		$result = '';
+		$result .= '<div class="alert alert-danger alert-dismissible" role="alert">';
+		$result .= '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
+		$result .= 'Something bad happend during sending this message. Please try again later';
+		$result .= '</div>';
+	
+		echo $result;
 	}
 
-	$result = '';
-	$result .= '<div class="alert alert-danger alert-dismissible" role="alert">';
-	$result .= '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
-	$result .= 'Something bad happend during sending this message. Please try again later';
-	$result .= '</div>';
-
-	echo $result;
+	
 ?>
