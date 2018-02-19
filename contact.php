@@ -1,52 +1,79 @@
 <?php
+if(isset($_POST['submit']){
+$errors = array();
 
-error_reporting(-1);
-ini_set('display_errors', 'On');
-set_error_handler("var_dump");
+	// Check if name has been entered
+	if (!isset($_POST['name'])) {
+		$errors['name'] = 'Please enter your name';
+	}else{
+		$name = $_POST['name'];
+	}
 
-$name_error = "";
-$email_error = "";
-$msg_error = "";
-$name = $_POST['name'];
-$email = $_POST['email'];
-$msg = $_POST['message'];
+	// Check if email has been entered and is valid
+	if (!isset($_POST['email']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+		$errors['email'] = 'Please enter a valid email address';
+	}else{
+		$email = $_POST['email'];
+	}
 
-   $to = "yekuwilfred@gmail.com"; // <– replace with your address here
-   $subject = "Bizness";
-   $message = "Noms: \n". "Raison Social: \n"."Type de Souscription: \n". $msg. "\n";
-   $from = $email;
-   $headers = array("From:". $from,
-    "Reply-To: ".$email,
-    "X-Mailer: PHP/" . PHP_VERSION
-);
-$headers = implode("\r\n", $headers);
-    if (isset($_POST['submit'])){
-                if (!(empty($name))) {
-                        if (!(empty($email))){
-                            if (!(empty($message))){
-                                mail($to,$subject,$message,$headers);
-                                echo "<div class='container' style='margin-top:5%;'>
-	<div class='row'>
-        <div class='jumbotron' style='box-shadow: 2px 2px 4px #000000;'>
-            <h2 class='text-center'>Thanks. I will contact you soon!</h2>
-          <div class='btn-group center-block' style='margin-top:50px;'>
-                <a href='#' class='btn btn-lg btn-primary center-block'>page d'accueil</a>
-            </div>
-        </div>
-	</div>
-</div>";
-                            }else{
-                               echo '<p>Fill your message please.</p>';
+	//Check if message has been entered
+	if (!isset($_POST['message'])) {
+		$errors['message'] = 'Please enter your message';
+	}else{
+		$message = $_POST['message'];
+	}
+
+	$errorOutput = '';
+
+	if(!empty($errors)){
+
+		$errorOutput .= '<div class="alert alert-danger alert-dismissible" role="alert">';
+ 		$errorOutput .= '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
+
+		$errorOutput  .= '<ul>';
+
+		foreach ($errors as $key => $value) {
+			$errorOutput .= '<li>'.$value.'</li>';
+		}
+
+		$errorOutput .= '</ul>';
+		$errorOutput .= '</div>';
+
+		echo $errorOutput;
+		die();
+	}
+
+
+
+	$from = $email;
+	$to = 'yekuwilfred@gmail.com;  // please change this email id';
+	$subject = 'Contact Form : Yeku Wilfred C. bizness';
+
+	$body = "From: $name\n E-Mail: $email\n Message:\n $message";
+
+	$headers = "From: ".$from;
+
+
+	//send the email
+	$result = '';
+	if (mail($to, $subject, $body, $headers)) {
+		$result .= '<div class="alert alert-success alert-dismissible" role="alert">';
+ 		$result .= '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
+		$result .= 'Thank You! I will be in touch';
+		$result .= '</div>';
+
+		echo $result;
+	}else{
+		$result = '';
+		$result .= '<div class="alert alert-danger alert-dismissible" role="alert">';
+		$result .= '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
+		$result .= 'Something bad happend during sending this message. Please try again later';
+		$result .= '</div>';
+	
+		echo $result;
+	}
+
+	
 }
-                        }else {
-                            echo '<p>Fill your email please.</p>';
-}
-                }else{
-                    echo '<p>Fill your name please.</p>';
-}
-    }else{
-            echo '<p>Fill the form.</p>';
-}
-
-
- ?>
+	
+?>
