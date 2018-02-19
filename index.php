@@ -98,7 +98,7 @@
         <h2 class="title">Get In Touch</h2>
         <div class="row">
             <div class="col-md-7">
-                <form class="form-horizontal" action="contact.php" method="POST" enctype="multipart/form-data">
+                <form class="form-horizontal" action="contact.php" method="POST">
                     <div class="form-group">
                         <label class="control-label col-sm-2" for="name">Name:</label>
                         <div class="col-sm-10">

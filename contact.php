@@ -70,3 +70,4 @@
 	$result .= '</div>';
 
 	echo $result;
+?>
