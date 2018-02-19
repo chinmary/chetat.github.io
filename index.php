@@ -119,7 +119,7 @@
                     </div>
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
-                            <button type="submit"  id="cfsubmit"  class="btn btn-primary"><i class="fas fa-paper-plane"></i>&nbsp;Send
+                            <button type="submit"  id="submit" name="submit"  class="btn btn-primary"><i class="fas fa-paper-plane"></i>&nbsp;Send
                             </button>
                         </div>
                     </div>
