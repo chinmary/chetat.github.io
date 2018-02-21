@@ -1,5 +1,5 @@
 <?php
-if(isset($_POST['submit']){
+if(isset($_POST['submit'])){
 $errors = array();
 
 	// Check if name has been entered
