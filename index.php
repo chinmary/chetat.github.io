@@ -125,7 +125,7 @@
                     <div class="form-group">
                         <div class="col-sm-10">
                             <label for="message">Message:</label>
-                            <textarea class="form-control" id="message"  name="message" rows="5" required></textarea>
+                            <textarea class="form-control" id="message"  name="message" rows="5" ></textarea>
                         </div>
                     </div>
                     <div class="form-group">

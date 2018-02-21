@@ -46,7 +46,7 @@ $errors = array();
 
 
 	$from = $email;
-	$to = 'yekuwilfred@gmail.com;  // please change this email id';
+	$to = 'yekuwilfred@gmail.com';
 	$subject = 'Contact Form : Yeku Wilfred C. bizness';
 
 	$body = "From: $name\n E-Mail: $email\n Message:\n $message";
