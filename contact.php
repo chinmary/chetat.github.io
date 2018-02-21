@@ -69,7 +69,7 @@ $errors = array();
 		$result .= '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
 		$result .= 'Something bad happend during sending this message. Please try again later';
 		$result .= '</div>';
-	
+		echo $body;
 		echo $result;
 	}
 
