@@ -1,23 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
 body{
     font-size: 16px;
     overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
 }
-
 .nav-item{
-    padding:2% 4% 2% 4%;
-    margin: 0 2% 0 2%;
+    margin: 0% 5% 0 5%;
 }
 .nav-link{
-    color: #ffffff;
+    padding:4% 8% 4% 8%;
+    border-radius: 8px;
+    color:#ffffff;
     font-size:1.5rem;
     font-weight:500;
+    -webkit-transition: padding 1s ease-out;
+    -moz-transition: padding 1s ease-out;
+    transition: padding 1s ease-out;
 }
 .nav-link:hover{
-    background-color: fff;
-    color: #0077B5;
+    background-color:#4842f4;
+    color: #ffffff;
+
 }
+
+
 .home{
-    height: 60vh;
+    height: 500px;
 }
 .home{
     background-image:url("../img/home-office-336373_1920.jpg");
@@ -30,18 +38,20 @@ body{
 .title{
     font-size: 2.5rem;
     text-align: center;
+    color: #9C94AA
 }
 
 #about{
-    background-color: #777777;
+    padding: 5% 0% 5% 0 ;
+    background-color: #4842f4;
     color: #ffffff;
 }
-#portfolio{
-
+#about .title{
+    padding-bottom: 2.5%;
 }
 
 #contact{
-    background-color: #777777;
+    background-color:#4842f4;
     color:#ffffff;
 }
 .divider{
@@ -50,3 +60,5 @@ body{
     background-color: #dffdff;
     margin: 0 auto 20px;
 }
+
+
